@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Node.js (Frontend dependencies)
+node_modules/
+frontend/node_modules/
+frontend/build/
+
+# AI Weights & Model Checkpoints
+*.pth
+*.pkl
+*.zip
+**/saved_models/
+**/trained_weights/
+
+# IDE settings
+.vscode/
+.idea/
