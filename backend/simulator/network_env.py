@@ -30,12 +30,15 @@ def create_enterprise_network():
     ]
     G.add_edges_from(network_edges)
     
-    print(f"🚀 Success: Virtual Enterprise Network Compiled!")
-    print(f"Total Network Nodes: {G.number_of_nodes()} | Connected Traffic Edges: {G.number_of_edges()}\n")
+    print("\n" + "="*50)
+    print(f"🚀 SUCCESS: VIRTUAL ENTERPRISE NETWORK COMPILED!")
+    print(f"Total Network Nodes: {G.number_of_nodes()} | Connected Traffic Edges: {G.number_of_edges()}")
+    print("="*50 + "\n")
     
-    # Print out properties of our constructed assets
-    for node in G.nodes(data=True):
-        print(f"Asset: {node[0]} -> Type: {node[1]['type']} | Vuln Score: {node[1]['vulnerability_score']}")
+    # Print out properties of our constructed assets to prove they exist
+    for node_name, data in G.nodes(data=True):
+        print(f"🌐 Device: {node_name:<20} | Type: {data['type']:<10} | OS: {data['os']:<12} | Vuln: {data['vulnerability_score']}")
+    print("\n" + "="*50)
         
     return G
 
